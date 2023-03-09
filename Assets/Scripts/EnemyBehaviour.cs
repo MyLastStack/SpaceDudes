@@ -14,7 +14,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         FireDelay = Random.Range(1.2f, 4.0f);
-        velocity.x = 3;
+        velocity.x = 1.5f;
         Timestamp = Time.time;
     }
 
