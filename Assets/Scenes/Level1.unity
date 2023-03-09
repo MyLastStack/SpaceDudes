@@ -970,6 +970,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af281a6f28fcc8643af9bb147689e9e0, type: 3}
+--- !u!1 &959774402 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4151082918821078806, guid: b6570f88ef756bc4bb1b128157832645, type: 3}
+  m_PrefabInstance: {fileID: 4151082918531303398}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1206944628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1619,6 +1624,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2071599921}
+  - component: {fileID: 2071599922}
   m_Layer: 0
   m_Name: player HP
   m_TagString: Untagged
@@ -1644,6 +1650,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2071599922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071599920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 331399bdcd901f54c91ba13cae4f4581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 959774402}
+  healthPoint3: {fileID: 1483846609}
+  healthPoint2: {fileID: 1206944628}
+  healthPoint: {fileID: 761329326}
 --- !u!1001 &2100418150
 PrefabInstance:
   m_ObjectHideFlags: 0

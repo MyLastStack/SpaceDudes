@@ -6,12 +6,13 @@ using UnityEngine.InputSystem;
 public class PlayerBehaviour : MonoBehaviour
 {
     [SerializeField] GameObject PlayerBullet;
-
+    public int PlayerHP;
     Rigidbody2D rb;
     Vector3 velocity;
     // Start is called before the first frame update
     void Start()
     {
+        PlayerHP = 3;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -41,6 +42,18 @@ public class PlayerBehaviour : MonoBehaviour
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             Instantiate(PlayerBullet, rb.transform.position, Quaternion.identity);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("EnemyLaser"))
+        {
+            Destroy(collision.gameObject);
+            PlayerHP--;
+            if (PlayerHP == 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }
