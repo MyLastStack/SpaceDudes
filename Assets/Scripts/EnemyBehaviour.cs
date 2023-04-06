@@ -8,7 +8,7 @@ public class EnemyBehaviour : MonoBehaviour
     Vector2 velocity;
     [SerializeField] GameObject EnemyLaser;
     float Timestamp;
-    float FireDelay = 1.2f;
+    float FireDelay = 0.8f;
     // Start is called before the first frame update
     void Start()
     {

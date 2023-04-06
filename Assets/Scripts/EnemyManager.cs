@@ -34,7 +34,7 @@ public class EnemyManager : MonoBehaviour
 
         if (EnemyCount == 0)
         {
-            GameSceneManager.LoadWinScreen();
+            GameSceneManager.LoadLevelTwo();
         }
     }
 }
