@@ -27,6 +27,10 @@ public class EnemyManager : MonoBehaviour
         {
             Score.text = $"Score:\n{gameState.score = (MaxEnemies - EnemyCount) * 50}";
         }
+        else
+        {
+            Score.text = $"Score:\n0";
+        }
 
         if (EnemyCount == 0)
         {
