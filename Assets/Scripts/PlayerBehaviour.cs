@@ -53,6 +53,7 @@ public class PlayerBehaviour : MonoBehaviour
             if (PlayerHP == 0)
             {
                 Destroy(this.gameObject);
+                GameSceneManager.LoadLoseScreen();
             }
         }
     }
