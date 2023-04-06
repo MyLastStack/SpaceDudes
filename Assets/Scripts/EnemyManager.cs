@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyManager : MonoBehaviour
 {
@@ -9,8 +10,8 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI Score;
 
     protected GameState gameState;
-    int MaxEnemies;
-    int EnemyCount;
+    int MaxEnemies = 0;
+    int EnemyCount = 0;
 
     // Start is called before the first frame update
     void Start()

@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameSceneManager : MonoBehaviour
 {
-    int currentScene = 0;
     public static void LoadMainMenu() 
-    { 
+    {
         SceneManager.LoadScene(0); 
     }
     public static void LoadLevelOne() 
