@@ -38,7 +38,9 @@ public class UniqueEnemyBehaviour : MonoBehaviour
         if (!EnemyLaser) { return; }
         if (Random.Range(1,100) > 80)
         {
+            Instantiate(EnemyLaser, rb.transform.position, Quaternion.Euler(45, 0, 0));
             Instantiate(EnemyLaser, rb.transform.position, Quaternion.identity);
+            Instantiate(EnemyLaser, rb.transform.position, Quaternion.Euler(-45, 0, 0));
             Timestamp = Time.time;
         }
     }
