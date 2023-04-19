@@ -13,6 +13,8 @@ public class EnemyManager : MonoBehaviour
     int MaxEnemies = 0;
     int EnemyCount = 0;
 
+    [SerializeField] GameSceneManager gsm;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +37,7 @@ public class EnemyManager : MonoBehaviour
 
         if (EnemyCount == 0)
         {
-            GameSceneManager.LoadLevelTwo();
+            gsm.LoadNextLevel();
         }
     }
 }
