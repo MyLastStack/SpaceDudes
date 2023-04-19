@@ -27,7 +27,7 @@ public class EnemyBehaviour : MonoBehaviour
             ShootRandomly();
         }
         
-        if (rb.transform.position.x <= -3f)
+        if (rb.transform.position.y <= -3f)
         {
             GameSceneManager.LoadLoseScreen();
         }
