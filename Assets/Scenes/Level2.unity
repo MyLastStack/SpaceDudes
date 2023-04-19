@@ -1578,6 +1578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemiesLeft: {fileID: 198706509}
   Score: {fileID: 985569303}
+  gsm: {fileID: 1533120579}
 --- !u!1001 &1295055898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1816,6 +1817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1533120577}
   - component: {fileID: 1533120578}
+  - component: {fileID: 1533120579}
   m_Layer: 0
   m_Name: GameState
   m_TagString: Untagged
@@ -1851,6 +1853,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+--- !u!114 &1533120579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533120576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 333cf2d0c6d951f45826bf3bb0b32b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1602149375
 GameObject:
   m_ObjectHideFlags: 0
