@@ -23,7 +23,7 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        EnemiesLeft.text = $"Enemies\nleft: {EnemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length}";
+        EnemiesLeft.text = $"Left:\n{EnemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length}";
         if (EnemyCount < MaxEnemies)
         {
             Score.text = $"Score:\n{gameState.score = (MaxEnemies - EnemyCount) * 50}";
