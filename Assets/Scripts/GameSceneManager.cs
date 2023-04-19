@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static System.TimeZoneInfo;
 
 public class GameSceneManager : MonoBehaviour
 {
@@ -24,5 +25,10 @@ public class GameSceneManager : MonoBehaviour
     public static void LoadLoseScreen() 
     { 
         SceneManager.LoadScene(4); 
+    }
+
+    public void LoadNextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
