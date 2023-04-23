@@ -18,7 +18,7 @@ public class UniqueEnemyBehaviour : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         FireDelay = Random.Range(1.2f, 4.0f);
-        velocity.x = 2f;
+        velocity.x = -2f;
         Timestamp = Time.time;
 
         hp = 15;

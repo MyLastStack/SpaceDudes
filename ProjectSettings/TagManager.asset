@@ -9,6 +9,8 @@ TagManager:
   - Barrier
   - EnemyLaser
   - UEnemy
+  - PlayerLaser
+  - GameState
   layers:
   - Default
   - TransparentFX
