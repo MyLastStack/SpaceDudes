@@ -13,7 +13,6 @@ public class EnemyManager : MonoBehaviour
     int MaxEnemies = 0;
     int EnemyCount = 0;
     int previousCount;
-    int killCount = 0;
 
     [SerializeField] ScoreScriptableObject ScoreSO;
     [SerializeField] GameSceneManager gsm;
