@@ -12,6 +12,8 @@ public class EnemyManager : MonoBehaviour
     protected GameState gameState;
     int MaxEnemies = 0;
     int EnemyCount = 0;
+    int previousCount;
+    int killCount = 0;
 
     [SerializeField] ScoreScriptableObject ScoreSO;
     [SerializeField] GameSceneManager gsm;
@@ -20,6 +22,7 @@ public class EnemyManager : MonoBehaviour
     void Start()
     {
         MaxEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        previousCount = MaxEnemies;
         gameState = GameObject.FindObjectOfType<GameState>();
     }
 
@@ -27,7 +30,12 @@ public class EnemyManager : MonoBehaviour
     void Update()
     {
         EnemiesLeft.text = $"Left:\n{EnemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length}";
-        Score.text = $"Score:\n{ScoreSO.GameScore = (MaxEnemies - EnemyCount) * 50}";
+        if (previousCount > EnemyCount)
+        {
+            previousCount = EnemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+            ScoreSO.GameScore += 50;
+        }
+        Score.text = $"Score:\n{ScoreSO.GameScore}";
 
         if (EnemyCount == 0)
         {
