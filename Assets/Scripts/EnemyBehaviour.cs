@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyBehaviour : MonoBehaviour
 {
@@ -14,7 +15,8 @@ public class EnemyBehaviour : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         FireDelay = Random.Range(1.2f, 4.0f);
-        velocity.x = 1.5f;
+        // Velocity change by room
+        velocity.x = SceneManager.GetActiveScene().buildIndex * 1.5f;
         Timestamp = Time.time;
     }
 
