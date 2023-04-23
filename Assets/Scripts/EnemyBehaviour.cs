@@ -55,7 +55,11 @@ public class EnemyBehaviour : MonoBehaviour
             velocity.x *= -1;
             rb.transform.Translate(Vector2.down);
         }
-        if (collision.transform.tag == "PlayerLaser")
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("PlayerLaser"))
         {
             Destroy(collision.gameObject);
             hp--;
