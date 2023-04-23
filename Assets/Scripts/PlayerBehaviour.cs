@@ -12,7 +12,7 @@ public class PlayerBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerHP = 3;
+        PlayerHP = 1000;
         rb = GetComponent<Rigidbody2D>();
     }
 

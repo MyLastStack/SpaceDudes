@@ -62,7 +62,7 @@ public class UniqueEnemyBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("EnemyLaser"))
+        if (collision.CompareTag("PlayerLaser"))
         {
             Destroy(collision.gameObject);
             hp--;
