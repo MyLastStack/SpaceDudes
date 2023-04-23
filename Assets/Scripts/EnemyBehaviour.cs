@@ -10,9 +10,13 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] GameObject EnemyLaser;
     float Timestamp;
     float FireDelay = 0.8f;
+
+    int hp;
     // Start is called before the first frame update
     void Start()
     {
+        hp = 1;
+
         rb = GetComponent<Rigidbody2D>();
         FireDelay = Random.Range(1.2f, 4.0f);
         // Velocity change by room
@@ -50,6 +54,19 @@ public class EnemyBehaviour : MonoBehaviour
         {
             velocity.x *= -1;
             rb.transform.Translate(Vector2.down);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("PlayerLaser"))
+        {
+            Destroy(collision.gameObject);
+            hp--;
+            if (hp == 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }
