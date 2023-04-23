@@ -9,7 +9,10 @@ public class UniqueEnemyBehaviour : MonoBehaviour
     [SerializeField] GameObject EnemyLaser;
     float Timestamp;
     float FireDelay = 0.5f;
+
     float hp;
+    SpriteRenderer spriteRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +20,10 @@ public class UniqueEnemyBehaviour : MonoBehaviour
         FireDelay = Random.Range(1.2f, 4.0f);
         velocity.x = 2f;
         Timestamp = Time.time;
+
         hp = 15;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.material.color = Color.white;
     }
 
     // Update is called once per frame
@@ -59,8 +65,20 @@ public class UniqueEnemyBehaviour : MonoBehaviour
         if (collision.CompareTag("EnemyLaser"))
         {
             Destroy(collision.gameObject);
-
             hp--;
+            switch (hp)
+            {
+                case 15:
+                    spriteRenderer.material.color = Color.white;
+                    break;
+                case 10:
+                    spriteRenderer.material.color = Color.yellow;
+                    break;
+                case 5:
+                    spriteRenderer.material.color = Color.red;
+                    break;
+            }
+
             if (hp == 0)
             {
                 Destroy(this.gameObject);
