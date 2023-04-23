@@ -24,6 +24,10 @@ public class PlayerLaser : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
         }
+        if()
+        {
+
+        }
         if(collision.CompareTag("Wall"))
         {
             Destroy(this.gameObject);
