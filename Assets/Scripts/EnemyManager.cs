@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class EnemyManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI EnemiesLeft;
+    private int Enemy;
+    private int UEnemy;
     [SerializeField] TextMeshProUGUI Score;
 
     protected GameState gameState;
@@ -20,7 +22,9 @@ public class EnemyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MaxEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length + GameObject.FindGameObjectsWithTag("UEnemy").Length;
+        Enemy = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        UEnemy = GameObject.FindGameObjectsWithTag("UEnemy").Length;
+        MaxEnemies = Enemy + UEnemy;
         previousCount = MaxEnemies;
         gameState = GameObject.FindObjectOfType<GameState>();
     }
