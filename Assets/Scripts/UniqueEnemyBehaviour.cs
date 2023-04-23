@@ -8,7 +8,8 @@ public class UniqueEnemyBehaviour : MonoBehaviour
     Vector2 velocity;
     [SerializeField] GameObject EnemyLaser;
     float Timestamp;
-    float FireDelay = 0.8f;
+    float FireDelay = 0.5f;
+    float hp;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,7 @@ public class UniqueEnemyBehaviour : MonoBehaviour
         FireDelay = Random.Range(1.2f, 4.0f);
         velocity.x = 1.5f;
         Timestamp = Time.time;
+        hp = 15;
     }
 
     // Update is called once per frame
