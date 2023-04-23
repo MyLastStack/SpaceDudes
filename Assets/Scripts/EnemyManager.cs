@@ -7,8 +7,6 @@ using UnityEngine.SceneManagement;
 public class EnemyManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI EnemiesLeft;
-    private int Enemy;
-    private int UEnemy;
     [SerializeField] TextMeshProUGUI Score;
 
     protected GameState gameState;
