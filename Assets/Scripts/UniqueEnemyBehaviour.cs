@@ -15,7 +15,7 @@ public class UniqueEnemyBehaviour : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         FireDelay = Random.Range(1.2f, 4.0f);
-        velocity.x = 1.5f;
+        velocity.x = 2f;
         Timestamp = Time.time;
         hp = 15;
     }
@@ -51,7 +51,6 @@ public class UniqueEnemyBehaviour : MonoBehaviour
         if(collision.transform.tag == "Wall")
         {
             velocity.x *= -1;
-            rb.transform.Translate(Vector2.down);
         }
     }
 }
