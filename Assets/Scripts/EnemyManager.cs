@@ -20,7 +20,7 @@ public class EnemyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MaxEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        MaxEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length + GameObject.FindGameObjectsWithTag("UEnemy").Length;
         previousCount = MaxEnemies;
         gameState = GameObject.FindObjectOfType<GameState>();
     }

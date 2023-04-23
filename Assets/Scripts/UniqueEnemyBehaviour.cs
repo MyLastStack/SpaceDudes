@@ -53,4 +53,18 @@ public class UniqueEnemyBehaviour : MonoBehaviour
             velocity.x *= -1;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("EnemyLaser"))
+        {
+            Destroy(collision.gameObject);
+
+            hp--;
+            if (hp == 0)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+    }
 }
