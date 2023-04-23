@@ -19,11 +19,6 @@ public class PlayerLaser : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Enemy"))
-        {
-            Destroy(collision.gameObject);
-            Destroy(this.gameObject);
-        }
         if(collision.CompareTag("Wall"))
         {
             Destroy(this.gameObject);
