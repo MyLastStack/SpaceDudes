@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu]
 public class ScoreScriptableObject : ScriptableObject
 {
     [SerializeField] private float Score;
