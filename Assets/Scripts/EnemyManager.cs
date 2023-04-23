@@ -13,6 +13,7 @@ public class EnemyManager : MonoBehaviour
     int MaxEnemies = 0;
     int EnemyCount = 0;
 
+    [SerializeField] ScoreScriptableObject ScoreSO;
     [SerializeField] GameSceneManager gsm;
 
     // Start is called before the first frame update
@@ -26,9 +27,9 @@ public class EnemyManager : MonoBehaviour
     void Update()
     {
         EnemiesLeft.text = $"Left:\n{EnemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length}";
-        if (EnemyCount < MaxEnemies)
+        if (ScoreSO.GameScore != 0)
         {
-            Score.text = $"Score:\n{gameState.score = (MaxEnemies - EnemyCount) * 50}";
+            Score.text = $"Score:\n{ScoreSO.GameScore = (MaxEnemies - EnemyCount) * 50}";
         }
         else
         {

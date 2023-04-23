@@ -1577,6 +1577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemiesLeft: {fileID: 198706509}
   Score: {fileID: 985569303}
+  ScoreSO: {fileID: 11400000, guid: 386e5220a40cafd4c8aa4879e42ac022, type: 2}
   gsm: {fileID: 1533120579}
 --- !u!1001 &1295055898
 PrefabInstance:
