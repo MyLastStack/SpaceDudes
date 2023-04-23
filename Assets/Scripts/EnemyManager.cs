@@ -27,14 +27,7 @@ public class EnemyManager : MonoBehaviour
     void Update()
     {
         EnemiesLeft.text = $"Left:\n{EnemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length}";
-        if (ScoreSO.GameScore != 0)
-        {
-            Score.text = $"Score:\n{ScoreSO.GameScore = (MaxEnemies - EnemyCount) * 50}";
-        }
-        else
-        {
-            Score.text = $"Score:\n0";
-        }
+        Score.text = $"Score:\n{ScoreSO.GameScore = (MaxEnemies - EnemyCount) * 50}";
 
         if (EnemyCount == 0)
         {
